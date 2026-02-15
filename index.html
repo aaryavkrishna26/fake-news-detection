@@ -38,22 +38,29 @@ box-shadow:0 10px 40px rgba(0,0,0,0.8);
 border:3px solid #3b82f6;
 z-index:1000;
 }
+
+/* Process Flow */
+.step{display:flex;align-items:center;gap:15px;margin-bottom:18px;}
+.step-icon{background:#1e293b;padding:14px;border-radius:12px;color:#60a5fa;font-size:18px;min-width:50px;text-align:center;}
 </style>
 </head>
 
 <body onload="startTimer()">
 
+<!-- TIMER -->
 <div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4">
 <i class="fas fa-hourglass-start text-blue-600 text-2xl"></i>
 <span id="displayTime" class="text-4xl font-black font-mono">00:00</span>
 </div>
 
+<!-- NAVBAR -->
 <nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-8 py-4 flex justify-between items-center">
 <div class="text-xl font-black">PBL 2026</div>
 </nav>
 
 <main class="max-w-6xl mx-auto px-6 pt-40 pb-32 space-y-32">
 
+<!-- TITLE -->
 <section class="text-center">
 <div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase">
 ID: 2427030754, 2427030767
@@ -68,11 +75,11 @@ This project develops a machine learning system that automatically detects wheth
 </p>
 </section>
 
+<!-- PROBLEM -->
 <section id="problem" class="grid md:grid-cols-2 gap-12">
 
 <div class="glass p-10 rounded-[2.5rem] border-l-4 border-blue-600">
 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
-
 <p class="text-slate-400 leading-relaxed text-justify">
 The uncontrolled proliferation of fake and misleading news on digital platforms, particularly when disseminated by high-profile sources that possess inherent public trust, has created a critical challenge in distinguishing genuine information from disinformation.
 <br><br>
@@ -107,23 +114,28 @@ The innovation is a simple tool allowing users to quickly verify headlines throu
 </div>
 </section>
 
-<section id="methodology" class="space-y-12">
-<h2 class="text-4xl font-black text-center uppercase">System Methodology</h2>
+<!-- ================= SYSTEM METHODOLOGY ADDED ================= -->
+<section class="space-y-12">
 
-<div class="grid md:grid-cols-3 gap-8">
+<h2 class="text-4xl font-black text-center uppercase">SYSTEM METHODOLOGY</h2>
+
+<div class="grid md:grid-cols-3 gap-10">
 
 <div class="glass p-8 rounded-3xl">
-<h3 class="font-bold mb-4 text-blue-400">Dataset / Input</h3>
-<p class="text-slate-400 text-justify">
-Dataset: Fake and Real News Dataset from Kaggle. 7000 fake and 7000 real headlines (14,000 samples). Preprocessing includes lowercase conversion, punctuation removal and Bag-of-Words feature extraction using CountVectorizer.
+<h3 class="font-bold mb-4 text-blue-400 text-lg">Dataset / Input</h3>
+<p class="text-slate-400 text-justify leading-relaxed">
+Fake and Real News Dataset from Kaggle containing approximately 14,000 headlines (7000 fake and 7000 real).  
+Preprocessing includes lowercase conversion, punctuation removal, tokenization and Bag-of-Words feature extraction using CountVectorizer.
 </p>
 </div>
 
 <div class="glass p-8 rounded-3xl">
-<h3 class="font-bold mb-4 text-purple-400">Model / Architecture</h3>
-<p class="text-slate-400 text-justify">
-Headlines are converted to feature vectors and classified using Linear Support Vector Machine (SVM).
-Workflow: Input headline → preprocessing → feature extraction → SVM prediction → Real/Fake output.
+<h3 class="font-bold mb-4 text-purple-400 text-lg">Model / Architecture</h3>
+<p class="text-slate-400 text-justify leading-relaxed">
+Each headline is converted into a feature vector and classified using Linear Support Vector Machine (SVM).
+<br><br>
+Workflow:
+Input headline → preprocessing → feature extraction → SVM prediction → Real/Fake output.
 </p>
 </div>
 
@@ -131,15 +143,34 @@ Workflow: Input headline → preprocessing → feature extraction → SVM predic
 <i class="fab fa-python text-green-500 text-4xl mb-4"></i>
 <h3 class="font-bold mb-4 uppercase text-sm tracking-widest text-green-400">Live Execution</h3>
 <p class="text-slate-400 text-sm mb-6">Click below to run the working model on Google Colab.</p>
-<a href="https://colab.research.google.com/drive/16cDVR4T6M3DHDFr6sG_eFwnREzl8RqeE?usp=sharing" target="_blank"
+
+<a href="https://colab.research.google.com/drive/16cDVR4T6M3DHDFr6sG_eFwnREzl8RqeE?usp=sharing"
+target="_blank"
 class="px-8 py-3 bg-green-600 rounded-full text-sm font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">
 VIEW CODE / DEMO
 </a>
 </div>
 
 </div>
+
+<!-- PROCESS FLOW -->
+<div class="glass p-10 rounded-3xl mt-10">
+<h3 class="text-green-400 font-bold text-lg mb-6 uppercase tracking-widest text-center">Process Flow</h3>
+
+<div class="step"><div class="step-icon"><i class="fas fa-keyboard"></i></div>Input Headline</div>
+<div class="step"><div class="step-icon"><i class="fas fa-broom"></i></div>Preprocessing (Lowercase, Remove Punctuation)</div>
+<div class="step"><div class="step-icon"><i class="fas fa-chart-bar"></i></div>Bag-of-Words Vectorization</div>
+<div class="step"><div class="step-icon"><i class="fas fa-brain"></i></div>Linear SVM Model</div>
+<div class="step"><div class="step-icon"><i class="fas fa-check-circle"></i></div>Binary Prediction (Real / Fake)</div>
+
+<p class="text-slate-500 text-sm mt-6 text-center">
+Confidence score is generated for each prediction.
+</p>
+</div>
+
 </section>
 
+<!-- RESULTS -->
 <section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
 <h2 class="text-3xl font-black mb-12 text-center uppercase">Results & Analysis</h2>
 
@@ -152,14 +183,17 @@ VIEW CODE / DEMO
 <span class="text-blue-400 font-mono font-black text-3xl">84%</span>
 </div>
 
-<p class="text-slate-400 mt-6 text-justify">
-The Dummy Classifier (existing baseline system) achieved 51% accuracy but does not actually learn meaningful linguistic patterns. Our proposed SVM model achieved 84% accuracy with real language understanding and faster prediction, making it suitable for real-time applications.
+<p class="text-slate-400 mt-6 text-justify leading-relaxed">
+The Dummy Classifier baseline achieved 51% accuracy, approximately equal to random guessing.  
+The SVM model achieved 84% accuracy by learning contextual linguistic patterns from news headlines.  
+It separates fake and real news using an optimal hyperplane in high-dimensional feature space and provides fast prediction suitable for real-time applications.
 </p>
 </div>
 </div>
 </section>
 
-<section id="team" class="text-center pt-10">
+<!-- TEAM -->
+<section class="text-center pt-10">
 <h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">Academic Credits</h2>
 
 <div class="flex flex-wrap justify-center gap-10">
