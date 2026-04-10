@@ -2,15 +2,24 @@ import axios from 'axios';
 
 // API Base URL configuration
 const getBaseURL = () => {
-  const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+  // Priority 1: Explicit environment variable (for custom deployments)
   if (process.env.REACT_APP_API_URL) {
+    console.log('Using REACT_APP_API_URL:', process.env.REACT_APP_API_URL);
     return process.env.REACT_APP_API_URL;
   }
+
+  // Priority 2: Check if running on localhost (development)
+  const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
   if (isLocalhost) {
+    console.log('Detected localhost - using development backend');
     return 'http://localhost:5000';
   }
-  // Production - use Railway backend
-  return 'https://build-mart-production-a9e7.up.railway.app';
+
+  // Priority 3: Production deployment - use Railway backend
+  // This is the default for Vercel/production deployments
+  const productionURL = 'https://build-mart-production-a9e7.up.railway.app';
+  console.log('Using production Railway backend:', productionURL);
+  return productionURL;
 };
 
 const API_URL = getBaseURL();
