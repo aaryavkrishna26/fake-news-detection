@@ -1,0 +1,10 @@
+{
+  "name": "Ajmer Road Materials",
+  "email": "ajmer@test.com",
+  "password": "hello",
+  "contact": "9876546600",
+  "location": "Jaipur",
+  "address": "Ajmer Road, Bypass Area",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.527Z"
+}

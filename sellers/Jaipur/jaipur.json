@@ -1,0 +1,10 @@
+{
+  "name": "Jaipur City Builders",
+  "email": "jaipur@test.com",
+  "password": "hello",
+  "contact": "9876546300",
+  "location": "Jaipur",
+  "address": "Jaipur City Center, Ram Nagar",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.233Z"
+}

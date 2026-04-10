@@ -1,0 +1,10 @@
+{
+  "name": "Andheri Construction Hub",
+  "email": "andheri@test.com",
+  "password": "hello",
+  "contact": "9876543300",
+  "location": "Mumbai",
+  "address": "Andheri East, Near Metro Station",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:54.622Z"
+}

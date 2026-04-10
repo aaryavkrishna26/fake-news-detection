@@ -1,0 +1,10 @@
+{
+  "name": "Thane Quality Materials",
+  "email": "thane@test.com",
+  "password": "hello",
+  "contact": "9876543500",
+  "location": "Mumbai",
+  "address": "Thane East, Off Eastern Express Highway",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:54.825Z"
+}

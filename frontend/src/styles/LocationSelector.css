@@ -1,0 +1,164 @@
+/* Location Selector Page */
+.location-selector-page {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.location-container {
+  background: white;
+  border-radius: 12px;
+  padding: 50px 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.location-container h1 {
+  color: #1e3a8a;
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.location-container p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.search-box-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 15px;
+  background: #fafbfc;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+  border-color: #fbbf24;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.location-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background: transparent;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 12px 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdown-item:hover:not(.disabled) {
+  background: #f3f4f6;
+  padding-left: 20px;
+}
+
+.dropdown-item.disabled {
+  color: #999;
+  cursor: not-allowed;
+  text-align: center;
+}
+
+.city-name {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.popular-cities {
+  text-align: center;
+}
+
+.popular-cities h3 {
+  color: #1e3a8a;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.city-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.city-btn {
+  padding: 10px 18px;
+  border: 2px solid #fbbf24;
+  background: white;
+  color: #1e3a8a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.city-btn:hover {
+  background: #fbbf24;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .location-container {
+    padding: 35px 25px;
+  }
+
+  .location-container h1 {
+    font-size: 24px;
+  }
+
+  .city-buttons {
+    gap: 8px;
+  }
+
+  .city-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}

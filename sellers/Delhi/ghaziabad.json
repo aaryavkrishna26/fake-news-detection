@@ -1,0 +1,10 @@
+{
+  "name": "Ghaziabad Materials House",
+  "email": "ghaziabad@test.com",
+  "password": "hello",
+  "contact": "9876544600",
+  "location": "Delhi",
+  "address": "Ghaziabad Mandi, Ghaziabad",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.466Z"
+}

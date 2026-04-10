@@ -1,0 +1,10 @@
+{
+  "name": "Shyam Nagar Supplies",
+  "email": "shyam@test.com",
+  "password": "hello",
+  "contact": "9876546500",
+  "location": "Jaipur",
+  "address": "Shyam Nagar, Near Ajmer Road",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.432Z"
+}

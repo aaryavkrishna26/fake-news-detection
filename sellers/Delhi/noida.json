@@ -1,0 +1,10 @@
+{
+  "name": "Noida Industrial Supplies",
+  "email": "noida@test.com",
+  "password": "hello",
+  "contact": "9876544500",
+  "location": "Delhi",
+  "address": "Noida City Center, Noida",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.353Z"
+}

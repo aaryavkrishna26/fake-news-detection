@@ -1,0 +1,10 @@
+{
+  "name": "Okhla Industrial Traders",
+  "email": "okhla@test.com",
+  "password": "hello",
+  "contact": "9876544200",
+  "location": "Delhi",
+  "address": "Okhla Industrial Area, Phase-1",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.036Z"
+}

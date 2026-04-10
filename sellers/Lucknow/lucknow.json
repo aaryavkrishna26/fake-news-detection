@@ -1,0 +1,10 @@
+{
+  "name": "Lucknow Build Store",
+  "email": "lucknow@test.com",
+  "password": "hello",
+  "contact": "9876545300",
+  "location": "Lucknow",
+  "address": "Lucknow City Center, Krishna Nagar",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.700Z"
+}

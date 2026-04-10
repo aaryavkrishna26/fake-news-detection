@@ -1,0 +1,10 @@
+{
+  "name": "Charbagh Quality Mart",
+  "email": "charbagh@test.com",
+  "password": "hello",
+  "contact": "9876545500",
+  "location": "Lucknow",
+  "address": "Charbagh, Near Railway Station",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.917Z"
+}

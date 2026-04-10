@@ -1,0 +1,10 @@
+{
+  "name": "Shahdara Construction Co",
+  "email": "shahdara@test.com",
+  "password": "hello",
+  "contact": "9876544300",
+  "location": "Delhi",
+  "address": "Shahdara, Near Delhi Border",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.138Z"
+}

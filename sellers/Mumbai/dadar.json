@@ -1,0 +1,10 @@
+{
+  "name": "Dadar Premium Supplies",
+  "email": "dadar@test.com",
+  "password": "hello",
+  "contact": "9876543400",
+  "location": "Mumbai",
+  "address": "Dadar West, Central Mumbai",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:54.730Z"
+}

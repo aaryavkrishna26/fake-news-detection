@@ -1,0 +1,10 @@
+{
+  "name": "Sodala Construction Hub",
+  "email": "sodala@test.com",
+  "password": "hello",
+  "contact": "9876546400",
+  "location": "Jaipur",
+  "address": "Sodala, Industrial Area",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.334Z"
+}

@@ -1,0 +1,597 @@
+/* ═══════════════════════════════════════════════════════════════════
+   NAVBAR STYLES
+   ═══════════════════════════════════════════════════════════════════ */
+
+.navbar {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  width: 100%;
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 64px;
+  padding: 0 8px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LOGO
+   ═══════════════════════════════════════════════════════════════════ */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  gap: 0;
+}
+
+.logo-build {
+  color: var(--blue);
+}
+
+.logo-mart {
+  color: var(--orange);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CENTER NAV LINKS
+   ═══════════════════════════════════════════════════════════════════ */
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  margin-left: 40px;
+}
+
+.nav-link {
+  color: var(--gray-600);
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.nav-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.btn-logout {
+  background-color: var(--red);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  transform: translateY(-6px);
+}
+
+.btn-logout:hover {
+  background-color: #DC2626;
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RIGHT: AUTH & USER MENU
+   ═══════════════════════════════════════════════════════════════════ */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.nav-location {
+  font-size: 14px;
+  color: var(--blue);
+  white-space: nowrap;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-location {
+  background-color: var(--blue);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-location:hover {
+  background-color: var(--blue-dark);
+  box-shadow: 0 2px 8px rgba(27, 58, 107, 0.2);
+}
+
+.nav-cart-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.nav-cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -2px;
+  background-color: var(--orange);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-username {
+  font-size: 14px;
+  color: var(--gray-700);
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0 8px;
+  border-left: 1px solid var(--gray-200);
+  border-right: 1px solid var(--gray-200);
+}
+
+/* Location Selector for public users */
+.nav-location-select {
+  padding: 6px 10px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--gray-700);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-location-select:hover {
+  border-color: var(--blue);
+}
+
+.nav-location-select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Profile link */
+.nav-link.profile-link {
+  font-size: 18px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.nav-link.profile-link:hover {
+  transform: scale(1.15);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOBILE DROPDOWN MENU
+   ═══════════════════════════════════════════════════════════════════ */
+
+.navbar-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--white);
+  border-top: 1px solid var(--gray-200);
+  padding: 12px 0;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+}
+
+.navbar-dropdown.active {
+  display: flex;
+}
+
+.dropdown-link,
+.dropdown-item {
+  padding: 12px 20px;
+  color: var(--gray-600);
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-link:hover {
+  background-color: var(--gray-50);
+  color: var(--blue);
+}
+
+.dropdown-item {
+  cursor: default;
+  color: var(--gray-600);
+}
+
+.dropdown-item.user-info {
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.dropdown-link.logout {
+  color: var(--red);
+}
+
+.dropdown-link.logout:hover {
+  background-color: #FEE2E2;
+}
+
+/* Mobile location button */
+.navbar-dropdown .btn-location {
+  width: calc(100% - 40px);
+  margin: 8px 20px;
+  padding: 10px 16px;
+}
+
+/* Location Selector for mobile dropdown */
+.dropdown-location-select {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--gray-700);
+  background-color: var(--gray-50);
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dropdown-location-select:hover {
+  border-color: var(--blue);
+}
+
+.dropdown-location-select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.dropdown-city-selector {
+  padding: 12px 20px 0;
+  border-top: 1px solid var(--gray-200);
+  margin-top: 8px;
+}
+
+.dropdown-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+}
+
+.dropdown-city-option {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  background-color: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dropdown-city-option:hover {
+  background-color: var(--gray-100);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.dropdown-city-option.active {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   HAMBURGER MENU
+   ═══════════════════════════════════════════════════════════════════ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--gray-800);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-dropdown {
+    display: flex;
+  }
+
+  .navbar-links,
+  .navbar-right {
+    display: none;
+  }
+
+  .navbar-logo {
+    flex: 1;
+  }
+}
+
+.mobile-menu-backdrop {
+  display: none;
+}
+
+/* ====================== RESPONSIVE DESIGN ====================== */
+
+@media (max-width: 1024px) {
+  .navbar-center {
+    min-width: 250px;
+  }
+
+  .location-text {
+    max-width: 80px;
+  }
+
+  .search-input {
+    font-size: 12px;
+  }
+
+  .search-input::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .navbar-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-right {
+    gap: 0;
+  }
+
+  .auth-section {
+    gap: 6px;
+  }
+
+  .seller-tagline {
+    display: none;
+  }
+
+  .auth-buttons {
+    gap: 6px;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .user-profile-btn {
+    gap: 6px;
+    padding: 4px 8px;
+  }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .user-name {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .logo-tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-content {
+    padding: 10px 12px;
+  }
+
+  .navbar-left {
+    flex: 1;
+  }
+
+  .navbar-right {
+    gap: 0;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .logo-icon {
+    font-size: 1.3rem;
+  }
+
+  .btn-login {
+    padding: 8px 10px;
+    font-size: 11px;
+    border-width: 1px;
+  }
+
+  .btn-register {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .auth-buttons {
+    gap: 4px;
+  }
+
+  .user-profile-btn {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .user-badge {
+    gap: 2px;
+    font-size: 10px;
+  }
+
+  .user-avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+
+/* ====================== SCROLLBAR STYLING ====================== */
+
+.city-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.city-list::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.city-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.city-list::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ====================== UTILITY CLASSES ====================== */
+
+.hide-mobile {
+  display: flex !important;
+}
+
+.show-mobile {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: flex !important;
+  }
+}

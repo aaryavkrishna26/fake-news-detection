@@ -1,0 +1,10 @@
+{
+  "name": "Vijay Nagar Traders",
+  "email": "vijay@test.com",
+  "password": "hello",
+  "contact": "9876547300",
+  "location": "Indore",
+  "address": "Vijay Nagar, Gandhi Marg",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.750Z"
+}

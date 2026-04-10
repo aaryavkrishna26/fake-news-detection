@@ -1,0 +1,10 @@
+{
+  "name": "Gomti Nagar Builders",
+  "email": "gomti@test.com",
+  "password": "hello",
+  "contact": "9876545200",
+  "location": "Lucknow",
+  "address": "Gomti Nagar, Block A",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.573Z"
+}

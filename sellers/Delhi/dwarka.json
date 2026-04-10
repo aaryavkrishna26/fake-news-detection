@@ -1,0 +1,10 @@
+{
+  "name": "Dwarka Build Solutions",
+  "email": "dwarka@test.com",
+  "password": "hello",
+  "contact": "9876544400",
+  "location": "Delhi",
+  "address": "Dwarka Industrial Area, Dwarka",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.245Z"
+}

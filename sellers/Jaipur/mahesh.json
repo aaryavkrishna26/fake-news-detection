@@ -1,0 +1,10 @@
+{
+  "name": "Mahesh Nagar Traders",
+  "email": "mahesh@test.com",
+  "password": "hello",
+  "contact": "9876546200",
+  "location": "Jaipur",
+  "address": "Mahesh Nagar, C-Block",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.121Z"
+}

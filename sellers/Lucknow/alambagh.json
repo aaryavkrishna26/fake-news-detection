@@ -1,0 +1,10 @@
+{
+  "name": "Alambagh Construction",
+  "email": "alambagh@test.com",
+  "password": "hello",
+  "contact": "9876545400",
+  "location": "Lucknow",
+  "address": "Alambagh, Main Road",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:55.815Z"
+}

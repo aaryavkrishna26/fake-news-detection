@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════════════════════
+   AUTH FORMS STYLES (Login & Register)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.auth-page {
+  background-color: var(--gray-100);
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.auth-card-register {
+  max-width: 450px;
+}
+
+.auth-logo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.auth-logo .logo-build {
+  color: var(--blue);
+}
+
+.auth-logo .logo-mart {
+  color: var(--orange);
+}
+
+.auth-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-800);
+  text-align: center;
+  margin: 0 0 6px 0;
+}
+
+.auth-subtext {
+  font-size: 13px;
+  color: var(--gray-600);
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Role Selector */
+.role-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.role-option {
+  flex: 1;
+  cursor: pointer;
+}
+
+.role-option input {
+  display: none;
+}
+
+.role-label {
+  display: block;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.role-option input:checked + .role-label {
+  background-color: #EFF6FF;
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* Error Message */
+.text-error {
+  color: var(--red);
+  font-size: 13px;
+  margin: -12px 0 0 0;
+  padding: 0;
+}
+
+/* Footer Text */
+.auth-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.auth-link {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.auth-link:hover {
+  color: #1D4ED8;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px;
+  }
+
+  .auth-heading {
+    font-size: 18px;
+  }
+
+  .auth-subtext {
+    font-size: 12px;
+  }
+}

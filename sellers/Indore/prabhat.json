@@ -1,0 +1,10 @@
+{
+  "name": "Prabhat Square Supplies",
+  "email": "prabhat@test.com",
+  "password": "hello",
+  "contact": "9876547400",
+  "location": "Indore",
+  "address": "Prabhat Square, Main Indore",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.849Z"
+}

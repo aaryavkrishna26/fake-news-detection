@@ -1,0 +1,10 @@
+{
+  "name": "Indore Build Center",
+  "email": "indore@test.com",
+  "password": "hello",
+  "contact": "9876547200",
+  "location": "Indore",
+  "address": "Indore City Center, Vijay Nagar",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.635Z"
+}

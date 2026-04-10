@@ -1,0 +1,10 @@
+{
+  "name": "Bandra Building Materials",
+  "email": "bandra@test.com",
+  "password": "hello",
+  "contact": "9876543200",
+  "location": "Mumbai",
+  "address": "Bandra Industrial Area, Bandra",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:54.503Z"
+}

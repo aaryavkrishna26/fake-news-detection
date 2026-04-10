@@ -1,0 +1,10 @@
+{
+  "name": "Bada Bazaar Materials",
+  "email": "bada@test.com",
+  "password": "hello",
+  "contact": "9876547500",
+  "location": "Indore",
+  "address": "Bada Bazaar, Old Indore",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:56.948Z"
+}

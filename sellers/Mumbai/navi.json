@@ -1,0 +1,10 @@
+{
+  "name": "Navi Mumbai Build Mart",
+  "email": "navi@test.com",
+  "password": "hello",
+  "contact": "9876543600",
+  "location": "Mumbai",
+  "address": "Navi Mumbai, Vashi",
+  "totalMaterials": 10,
+  "createdAt": "2026-04-09T15:31:54.931Z"
+}
