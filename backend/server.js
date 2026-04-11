@@ -15,14 +15,23 @@ const app = express();
 
 // Configure CORS to accept requests from Vercel frontend and localhost
 const corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://localhost:5000',
-    'https://build-mart-lyart.vercel.app',
-    'https://build-mart-k8h0val3w-aaryav-krishnas-projects.vercel.app',
-    'https://build-mart-2ivekau2b-aaryav-krishnas-projects.vercel.app'
-  ],
+  origin: function (origin, callback) {
+    // Allow localhost for development
+    if (!origin || origin.includes('localhost') || origin.includes('127.0.0.1')) {
+      callback(null, true);
+    }
+    // Allow all Vercel deployments (production, preview, etc.)
+    else if (origin.includes('vercel.app')) {
+      callback(null, true);
+    }
+    // Allow Railway and other backends
+    else if (origin.includes('railway.app') || origin.includes('build-mart')) {
+      callback(null, true);
+    }
+    else {
+      callback(null, true); // Allow for now, can restrict later
+    }
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization']
