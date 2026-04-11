@@ -41,7 +41,7 @@ For testing locally before committing:
 
 **File:** `frontend/.env.local`
 ```
-REACT_APP_API_URL=http://localhost:5000
+REACT_APP_API_URL=https://build-mart-production-a9e7.up.railway.app
 ```
 
 Or for testing production behavior locally:
@@ -81,7 +81,7 @@ Using production Railway backend: https://build-mart-production-a9e7.up.railway.
 
 **Not Expected (BAD) ❌:**
 ```
-API Base URL: http://localhost:5000
+API Base URL: https://build-mart-production-a9e7.up.railway.app
 Detected localhost - using development backend
 ```
 
@@ -110,7 +110,7 @@ Detected localhost - using development backend
 
 ## Troubleshooting
 
-### Problem: Still seeing localhost:5000 after changes
+### Problem: Still seeing https://build-mart-production-a9e7.up.railway.app  after changes
 
 **Solution:**
 1. Hard refresh the page: `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
@@ -224,7 +224,7 @@ app.use(cors()); // Allow all origins
 
 Your app will:
 1. ✅ Use the Railway backend in production
-2. ✅ Use localhost:5000 in development (on your machine)
+2. ✅ Use (https://build-mart-production-a9e7.up.railway.app) in development (on your machine)
 3. ✅ Show helpful logs in browser console
 4. ✅ Properly handle authentication
 5. ✅ Load materials, process orders, manage carts
