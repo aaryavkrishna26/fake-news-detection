@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'SET' : 'NOT SET');
+console.log('MONGO_URI:', process.env.MONGO_URI ? 'SET' : 'NOT SET');
+
 const authRoutes = require('./routes/auth');
 const materialRoutes = require('./routes/materials');
 const cartRoutes = require('./routes/cart');
