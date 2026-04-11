@@ -17,8 +17,8 @@ const corsOptions = {
   origin: [
     'http://localhost:3000',
     'http://localhost:3001',
-    'http://localhost:5000',
     'https://build-mart-lyart.vercel.app',
+    'https://build-mart-git-main-aaryav-krishnas-projects.vercel.app',
     'https://build-mart-k8h0val3w-aaryav-krishnas-projects.vercel.app',
     'https://build-mart-2ivekau2b-aaryav-krishnas-projects.vercel.app'
   ],
