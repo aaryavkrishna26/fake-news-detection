@@ -13,7 +13,6 @@ const Login = ({ setUser }) => {
     e.preventDefault();
     setError('');
     setLoading(true);
-    
     try {
       const res = await apiClient.post('/auth/login', form);
       localStorage.setItem('token', res.data.token);
@@ -24,7 +23,6 @@ const Login = ({ setUser }) => {
       localStorage.setItem('userPhone', res.data.user.phone);
       localStorage.setItem('userLocation', res.data.user.location);
       setUser(res.data.user);
-      
       if (res.data.user.role === 'seller') {
         navigate('/seller/dashboard');
       } else {
@@ -39,6 +37,30 @@ const Login = ({ setUser }) => {
     }
   };
 
+  const handleDemoLogin = (role) => {
+    const demoUser = {
+      id: role === 'buyer' ? 'demo-buyer-001' : 'demo-seller-001',
+      name: role === 'buyer' ? 'Demo Buyer' : 'Demo Seller',
+      role: role,
+      email: role === 'buyer' ? 'buyer@demo.com' : 'seller@demo.com',
+      phone: '9999999999',
+      location: 'Delhi',
+    };
+    localStorage.setItem('token', 'demo-token-' + role);
+    localStorage.setItem('userRole', demoUser.role);
+    localStorage.setItem('userName', demoUser.name);
+    localStorage.setItem('userId', demoUser.id);
+    localStorage.setItem('userEmail', demoUser.email);
+    localStorage.setItem('userPhone', demoUser.phone);
+    localStorage.setItem('userLocation', demoUser.location);
+    setUser(demoUser);
+    if (role === 'seller') {
+      navigate('/seller/dashboard');
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <div className="auth-page">
       <div className="auth-card">
@@ -46,10 +68,28 @@ const Login = ({ setUser }) => {
           <span className="logo-build">Build</span>
           <span className="logo-mart">Mart</span>
         </div>
-        
         <h1 className="auth-heading">Login</h1>
         <p className="auth-subtext">Welcome back! Please login to continue.</p>
-        
+
+        {/* Demo Login Buttons */}
+        <div style={{ marginBottom: '20px', padding: '15px', background: '#f0f9ff', borderRadius: '8px', border: '1px solid #bae6fd' }}>
+          <p style={{ fontSize: '13px', color: '#0369a1', marginBottom: '10px', fontWeight: '600' }}>🎯 Quick Demo Access:</p>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button
+              onClick={() => handleDemoLogin('buyer')}
+              style={{ flex: 1, padding: '8px', background: '#0ea5e9', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '600' }}
+            >
+              👤 Demo Buyer
+            </button>
+            <button
+              onClick={() => handleDemoLogin('seller')}
+              style={{ flex: 1, padding: '8px', background: '#f97316', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '600' }}
+            >
+              🏪 Demo Seller
+            </button>
+          </div>
+        </div>
+
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label className="label">Email Address</label>
@@ -62,7 +102,6 @@ const Login = ({ setUser }) => {
               required
             />
           </div>
-          
           <div className="form-group">
             <label className="label">Password</label>
             <input
@@ -74,9 +113,7 @@ const Login = ({ setUser }) => {
               required
             />
           </div>
-          
           {error && <p className="text-error">{error}</p>}
-          
           <button
             type="submit"
             className="btn btn-primary btn-full"
@@ -85,12 +122,10 @@ const Login = ({ setUser }) => {
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
-        
+
         <p className="auth-footer-text">
           Don't have an account?{' '}
-          <Link to="/register" className="auth-link">
-            Register
-          </Link>
+          <Link to="/register" className="auth-link">Register</Link>
         </p>
       </div>
     </div>
